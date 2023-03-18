@@ -11,6 +11,11 @@ if (!chat.isBanned && chat.audios && m.text.match(/(Дурак|дурак)/gi)) 
 let vn = './media/дурак.mp3'
 this.sendPresenceUpdate('recording', m.chat)   
 this.sendFile(m.chat, vn, 'error.mp3', null, m, true, {type: 'audioMessage', ptt: true})}
+
+if (!chat.isBanned && chat.audios && m.text.match(/(меню)/gi)) {
+let vn = './media/menu.mp3'
+this.sendPresenceUpdate('recording', m.chat)   
+this.sendFile(m.chat, vn, 'error.mp3', null, m, true, {type: 'audioMessage', ptt: true})}
     
 if (!chat.isBanned && chat.audios && m.text.match(/(Скучаю|скучаю)/gi)) {    
 let vn = './media/скучаю.mp3'
