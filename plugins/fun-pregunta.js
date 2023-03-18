@@ -8,5 +8,5 @@ mentions: m.mentionedJid
 } : {})
 handler.help = ['pregunta <texto>?']
 handler.tags = ['kerang']
-handler.command = /^Хулиган|бот|apakah$/i
+handler.command = /^бот|apakah$/i
 export default handler

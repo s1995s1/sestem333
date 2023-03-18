@@ -116,20 +116,6 @@ ${readMore}
 ° ඬ⃟💎 _${usedPrefix}приветствие *<текст>*__
 ° ඬ⃟💎 _${usedPrefix}прощание *<текст>*_
 
-*<ℂ𝕆𝕄𝔸ℕ𝔻𝕆𝕊 +𝟙𝟠/>*
-
-° ඬ⃟🔞 _${usedPrefix}перень_
-° ඬ⃟🔞 _${usedPrefix}девушка_
-° ඬ⃟🔞 _${usedPrefix}девушка2_
-° ඬ⃟🔞 _${usedPrefix}по_
-° ඬ⃟🔞 _${usedPrefix}tiktokxxx_
-° ඬ⃟🔞 _${usedPrefix}tetas_
-° ඬ⃟🔞 _${usedPrefix}booty_
-° ඬ⃟🔞 _${usedPrefix}ecchi_
-° ඬ⃟🔞 _${usedPrefix}furro_
-° ඬ⃟🔞 _${usedPrefix}imagenlesbians_
-° ඬ⃟🔞 _${usedPrefix}panties_
-
 *<𝔹𝕌𝕊ℂ𝔸𝔻𝕆ℝ𝔼𝕊/>*
 
 ° ඬ⃟🔍 _${usedPrefix}гугл *<текст>*_
@@ -175,7 +161,7 @@ ${readMore}
 ° ඬ⃟👑 _${usedPrefix}груп *<текст>*_
 `.trim()
 let buttons = [
-{ buttonId: '#memu2', buttonText: { displayText: 'МЕНЮ2' }, type: 1 },
+{ buttonId: '#меню2', buttonText: { displayText: 'МЕНЮ2' }, type: 1 },
 { buttonId: '#создатель', buttonText: { displayText: 'СОЗДАТЕЛЬ' }, type: 1 },
 { buttonId: '#infobot', buttonText: { displayText: 'ИНФОБОТА' }, type: 1 }]
 let buttonMessage = {
@@ -194,7 +180,7 @@ mediaUrl: null,
 title: '👑Хулиган - 𝐁𝐎𝐓 👑',
 body: null,
 thumbnail: img,
-sourceUrl: `Бот Царя`
+sourceUrl: `Бот Серёги`
 }}}
 conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 //await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
