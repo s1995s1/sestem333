@@ -4,10 +4,10 @@ import { fileURLToPath } from 'url'
 import fs from 'fs'
 
 global.owner = [
-  ['79010070455', '👑 Альтрон - Царя👑', true],
+  ['79531126750', '👑 Альтрон - Царя👑', true],
 ] 
-global.suittag = ['79010070455'] 
-global.prems = ['79010070455'] 
+global.suittag = ['79531126750'] 
+global.prems = ['79531126750'] 
 
 global.packname = '(☞Альтрон)☞'
 global.author = '★Альтрон - 𝙱𝚘𝚝★'
