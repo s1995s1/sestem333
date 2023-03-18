@@ -12,16 +12,19 @@ rows: [
 {title: "❗ | ОГРАНИЧИТЬ", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} ограничить`},    
 {title: "☑️ | АВТО ЧТЕНИЕ", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} авточтение`},
 {title: "🔊 | АУДИО", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} аудио`},
-{title: "👾 | АВТО СТИКЕР", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} автостикер`},
+{title: "👾 | АВТО СТИКЕР", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} автостики`},
 {title: "💬 | БЛОК", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} блок`},
 {title: "🏢 | ТОЛЬКО ГРУППЫ", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} толькогруппа`},
 {title: "❌ | АНТИВИДЕНЬЕ", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} антивидение`},
 {title: "📵 | ПРОТИВОУГОННЫЙ", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ ", rowId: `${usedPrefix + command} противоугонный`},
 {title: "💬 | ЧАСТНЫЙ", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} частный`},
-{title: "🤬 | АНТИТОЛСИЧНЫЙ", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} антитоксичный`},
+{title: "🤬 | АНТИ ТОКСИЧНЫЙ", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} антитоксичный`},
 {title: "🕸️ | АНТИТРАБА", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} антитраба`},
-{title: "👎🏻 | АНТИИНДУС", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} антииндус`},  
+{title: "👎🏻 | АНТИ ИНДУС", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} антииндус`}, 
+{title: "🤖 | МОДЕ БОТ", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} модебот`}, 
+{title: "👑 | ТОЛЬКО АДМИН", description: "ВКЛЮЧИТЬ ИЛИ ОТКЛЮЧИТЬ", rowId: `${usedPrefix + command} толькоадмин`},    
 ]}, ]
+
 //let name = await conn.getName(m.sender)
 const listMessage = {
 text: ' ',
@@ -60,13 +63,15 @@ footer: `┏━━━━━━━━━━━━━┓
 ┣ ඬ⃟ℹ️ _${usedPrefix}выключить *антитоксичный*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}включить *антитраба*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}выключить *антитраба*_
-┣ ඬ⃟ℹ️ _${usedPrefix}включить *антииндус*_
-┣ ඬ⃟ℹ️ _${usedPrefix}выключить *антииндус*_
+┣ ඬ⃟ℹ️ _${usedPrefix}включить *антиарабики*_
+┣ ඬ⃟ℹ️ _${usedPrefix}выключить *антиарабики*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}включить *обморочный*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}выключить *обморочный*_
+┣ ඬ⃟ℹ️ _${usedPrefix}включить *толькоадмин*_
+┣ ඬ⃟ℹ️ _${usedPrefix}выключить *толькоадмин*_
 ┗━━━━━━━━━━━━━┛`,
 title: null,
-buttonText: "ЛИСТ КОМАНД",
+buttonText: "СТРОКА КОМАНД БЛЯ ГРУППЫ",
 sections }
 
 let isEnable = /true|включить|(turn)?on|1/i.test(command)
@@ -156,12 +161,22 @@ throw false
 }}
 chat.modohorny = isEnable          
 break
-case 'автостикер':
+case 'автостики':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
 global.dfail('owner' , m, conn)
 throw false
 }}
+chat.modohorny = isEnable          
+break
+case 'толькоадмин':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.modoadmin = isEnable          
+break    
 chat.autosticker = isEnable          
 break
 case 'аудио':
@@ -245,6 +260,16 @@ if (!(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
 throw false
 }}
+bot.antiPrivate = isEnable
+break
+case 'модебот':
+isAll = true
+if (!isROwner) {
+global.dfail('rowner', m, conn)
+throw false
+}
+bot.modejadibot = isEnable
+break  
 chat.antiToxic = isEnable
 break
 case 'антитраба':
