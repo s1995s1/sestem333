@@ -8,55 +8,47 @@ try {
 } finally {
 let name = await conn.getName(m.sender)
 let str = `
-*_ミ💖 𝙷𝙾𝙻𝙰 ${name} 💖彡_*
+*ミ💖 ПРИВЕТ _${name}_ 💖彡*
 
-ㅤㅤ *🗳️<ℂ𝔸𝕁𝔸 𝔽𝕌𝔼ℝ𝕋𝔼/>🔐*
+*<МЕНЮ АУДИО/>*
 
-- 𝙰𝚀𝚄𝙸 𝙿𝚄𝙴𝙳𝙴 𝙶𝚄𝙰𝚁𝙳𝙰𝚁 𝙼𝙴𝙽𝚂𝙰𝙹𝙴𝚂 𝚀𝚄𝙴 𝚀𝚄𝙸𝙴𝚁𝙰𝚂 𝚅𝙴𝚁 𝙼𝙰𝚂 𝚃𝙰𝚁𝙳𝙴
+° ඬ⃟🔊 _Выходи_
+° ඬ⃟🔊 _Добро пожаловать_
+° ඬ⃟🔊 _Ддосвидания_
+° ඬ⃟🔊 _Доброе утро_
+° ඬ⃟🔊 _Девочка_
+° ඬ⃟🔊 _Пока_
+° ඬ⃟🔊 _Заебал_
+° ඬ⃟🔊 _Иди на хуй_
+° ඬ⃟🔊 _Иди сюда_ 
+° ඬ⃟🔊 _Как дела_
+° ඬ⃟🔊 _Личка_
+° ඬ⃟🔊 _Личкоеб_
+° ඬ⃟🔊 _Люблю_
+° ඬ⃟🔊 _Отвали_
+° ඬ⃟🔊 _Правила_
+° ඬ⃟🔊 _Ржу_
+° ඬ⃟🔊 _Секс_
+° ඬ⃟🔊 _Спокойной ночи_
+° ඬ⃟🔊 _Суки_
+° ඬ⃟🔊 _Ты кто_
+° ඬ⃟🔊 _Чистка_
+° ඬ⃟🔊 _Фу свои_
+° ඬ⃟🔊 _Ха ха_
+° ඬ⃟🔊 _Это что_
+° ඬ⃟🔊 _Я пошла_
+° ඬ⃟🔊 _Я худею_
+° ඬ⃟🔊 _Ага_`
 
-*<𝔸𝔾ℝ𝔼𝔾𝔸ℝ 𝔸 𝕃𝔸 𝕃𝕀𝕊𝕋𝔸/>*
+.trim()
 
-° ඬ⃟🗳️ _${usedPrefix}agregarmsg *<texto/comando/palabra clave>* (responde a un texto)_
-° ඬ⃟🗳️ _${usedPrefix}agregarvn *<texto/comando/palabra clave>* (responde a una nota de voz)_
-° ඬ⃟🗳️ _${usedPrefix}agregarvideo *<texto/comando/palabra clave>* (responde a un video)_
-° ඬ⃟🗳️ _${usedPrefix}agregaraudio *<texto/comando/palabra clave>* (responde a un audio)_
-° ඬ⃟🗳️ _${usedPrefix}agregarimg *<texto/comando/palabra clave>* (responde a una imagen)_
-° ඬ⃟🗳️ _${usedPrefix}agregarsticker *<texto/comando/palabra clave>* (responde a un sticker)_
-
-*<𝕃𝕀𝕊𝕋𝔸 𝔻𝔼 ℂ𝕆𝕄𝔸ℕ𝔻𝕆𝕊/>*
-
-° ඬ⃟🗳️ _${usedPrefix}listamsg_
-° ඬ⃟🗳️ _${usedPrefix}listavn_
-° ඬ⃟🗳️ _${usedPrefix}listavideo_
-° ඬ⃟🗳️ _${usedPrefix}listaaudio_
-° ඬ⃟🗳️ _${usedPrefix}listaimg_
-° ඬ⃟🗳️ _${usedPrefix}listasticker_
-
-*<𝕍𝔼ℝ 𝕋𝔼𝕏𝕋𝕆𝕊 𝕆 𝔸ℝℂℍ𝕀𝕍𝕆𝕊/>*
-
-° ඬ⃟🗳️ _${usedPrefix}vermsg *<texto/comando/palabra clave>*_
-° ඬ⃟🗳️ _${usedPrefix}vervn *<texto/comando/palabra clave>*_
-° ඬ⃟🗳️ _${usedPrefix}vervideo *<texto/comando/palabra clave>*_
-° ඬ⃟🗳️ _${usedPrefix}veraudio *<texto/comando/palabra clave>*_
-° ඬ⃟🗳️ _${usedPrefix}verimg *<texto/comando/palabra clave>*_
-° ඬ⃟🗳️ _${usedPrefix}versticker *<texto/comando/palabra clave>*_
-
-*<𝔼𝕃𝕀𝕄𝕀ℕ𝔸ℝ/>*
-
-° ඬ⃟🗳️ _${usedPrefix}eliminarmsg *<texto/comando/palabra clave>*_
-° ඬ⃟🗳️ _${usedPrefix}eliminarvn *<texto/comando/palabra clave>*_
-° ඬ⃟🗳️ _${usedPrefix}eliminarvideo *<texto/comando/palabra clave>*_
-° ඬ⃟🗳️ _${usedPrefix}eliminaraudio *<texto/comando/palabra clave>*_
-° ඬ⃟🗳️ _${usedPrefix}eliminarimg *<texto/comando/palabra clave>*_
-° ඬ⃟🗳️ _${usedPrefix}eliminarsticker *<texto/comando/palabra clave>*_`.trim()
-
-conn.sendHydrated(m.chat, str, wm, pp, 'https://github.com/BrunoSobrino/TheMystic-Bot-MD', '𝙶𝙸𝚃𝙷𝚄𝙱', null, null, [
-['𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻', '/menu']
+conn.sendHydrated(m.chat, str, wm, pp, '', '', null, null, [
+['МЕНЮ', '/menu']
 ], m)
 }}
 handler.help = ['cajafuerte']
 handler.tags = ['owner']
-handler.command = /^(cajafuerte)$/i
+handler.command = /^(меню2)$/i
 handler.rowner = true
 handler.fail = null
 export default handler
